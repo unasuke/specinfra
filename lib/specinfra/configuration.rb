@@ -44,7 +44,7 @@ module Specinfra
 
       def method_missing(meth, val=nil)
         key = meth.to_s
-        key.gsub!(/=$/, '')
+        key.gsub(/=$/, '')
         ret = nil
         begin
           if ! val.nil?
